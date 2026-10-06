@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ভেদরগঞ্জ ইসলামিয়া চক্ষু হাসপাতাল | Bhedarganj Islamia Eye Hospital</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Hind Siliguri -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#0e4a6b',
+                            primary: '#0070a8',
+                            light: '#e0f2fe',
+                            accent: '#10b981',
+                            red: '#dc2626'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Hind Siliguri', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body {
+            font-family: 'Hind Siliguri', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .hero-bg {
+            background: linear-gradient(135deg, #0e4a6b 0%, #0070a8 50%, #0284c7 100%);
+        }
+        .badge-pulse {
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased">
+
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-white shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo & Title -->
+                <div class="flex items-center space-x-3 space-x-reverse">
+                    <div class="relative w-12 h-12 rounded-full border-2 border-brand-primary p-0.5 bg-white flex items-center justify-center shadow">
+                        <svg viewBox="0 0 100 100" class="w-full h-full">
+                            <circle cx="50" cy="50" r="46" fill="none" stroke="#0070a8" stroke-width="4"/>
+                            <path d="M 20 50 Q 50 20 80 50 Q 50 80 20 50 Z" fill="none" stroke="#0e4a6b" stroke-width="5"/>
+                            <circle cx="50" cy="50" r="16" fill="#0070a8"/>
+                            <circle cx="54" cy="46" r="5" fill="#ffffff"/>
+                            <text x="50" y="88" font-size="10" font-weight="bold" text-anchor="middle" fill="#0e4a6b">BIEH</text>
+                        </svg>
+                    </div>
+                    <div>
+                        <h1 class="text-xl sm:text-2xl font-bold text-brand-dark leading-tight">
+                            ভেদরগঞ্জ ইসলামিয়া চক্ষু হাসপাতাল
+                        </h1>
+                        <p class="text-xs sm:text-sm text-slate-500 font-medium">Bhedarganj Islamia Eye Hospital</p>
+                    </div>
+                </div>
+
+                <!-- Desktop Nav -->
+                <div class="hidden md:flex items-center space-x-6 space-x-reverse">
+                    <a href="#about" class="text-slate-700 hover:text-brand-primary font-medium transition">আমাদের সম্পর্কে</a>
+                    <a href="#doctors" class="text-slate-700 hover:text-brand-primary font-medium transition">চিকিৎসকবৃন্দ</a>
+                    <a href="#services" class="text-slate-700 hover:text-brand-primary font-medium transition">সেবাসমূহ</a>
+                    <a href="#contact" class="text-slate-700 hover:text-brand-primary font-medium transition">যোগাযোগ</a>
+                    <button onclick="openBookingModal()" class="bg-brand-red hover:bg-red-700 text-white font-semibold px-5 py-2.5 rounded-full shadow-lg transition flex items-center">
+                        <i class="fa-solid fa-calendar-check mr-2"></i> সিরিয়াল নিন
+                    </button>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button onclick="toggleMobileMenu()" class="text-slate-700 text-2xl p-2 focus:outline-none">
+                        <i id="menuIcon" class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Nav -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-4 space-y-3">
+            <a href="#about" onclick="toggleMobileMenu()" class="block text-slate-700 font-medium py-2 border-b">আমাদের সম্পর্কে</a>
+            <a href="#doctors" onclick="toggleMobileMenu()" class="block text-slate-700 font-medium py-2 border-b">চিকিৎসকবৃন্দ</a>
+            <a href="#services" onclick="toggleMobileMenu()" class="block text-slate-700 font-medium py-2 border-b">সেবাসমূহ</a>
+            <a href="#contact" onclick="toggleMobileMenu()" class="block text-slate-700 font-medium py-2 border-b">যোগাযোগ</a>
+            <button onclick="toggleMobileMenu(); openBookingModal();" class="w-full bg-brand-red text-white font-semibold py-2.5 rounded-lg shadow text-center">
+                <i class="fa-solid fa-calendar-check mr-2"></i> সিরিয়াল বুকিং করুন
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Banner Section -->
+    <section class="hero-bg text-white relative overflow-hidden py-12 lg:py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                
+                <div class="lg:col-span-7 text-center lg:text-left">
+                    <span class="inline-block bg-emerald-500 text-white text-sm font-semibold px-4 py-1.5 rounded-full mb-4 shadow">
+                        <i class="fa-solid fa-eye mr-1"></i> বিশ্বস্ত চক্ষু চিকিৎসা সেবা
+                    </span>
+                    <h2 class="text-3xl sm:text-5xl font-extrabold text-white leading-tight mb-4">
+                        আপনার চোখের সুস্থতাই <br class="hidden sm:block">আমাদের অঙ্গীকার
+                    </h2>
+                    <p class="text-slate-100 text-lg sm:text-xl mb-6">
+                        অভিজ্ঞ বিশেষজ্ঞ ডাক্তারদের মাধ্যমে আধুনিক যন্ত্রপাতি ও নিখুঁত ছানি অপারেশনের নির্ভরযোগ্য প্রতিষ্ঠান।
+                    </p>
+                    
+                    <!-- Visit Fee Banner -->
+                    <div class="inline-flex items-center bg-white text-slate-900 rounded-2xl p-4 shadow-2xl mb-8 border-2 border-yellow-400 badge-pulse">
+                        <div class="bg-brand-red text-white text-2xl font-extrabold px-4 py-2 rounded-xl mr-4 shadow">
+                            মাত্র ৯০/-
+                        </div>
+                        <div class="text-left">
+                            <span class="block text-xs font-bold text-slate-500 uppercase tracking-wider">বিশেষ সেবা মূল্য</span>
+                            <span class="text-xl font-bold text-brand-dark">ভিজিট মাত্র ৯০ টাকা!</span>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row justify-center lg:justify-start gap-4">
+                        <button onclick="openBookingModal()" class="bg-yellow-400 hover:bg-yellow-500 text-slate-900 font-bold px-8 py-3.5 rounded-xl shadow-xl transition text-lg">
+                            <i class="fa-solid fa-file-signature mr-2"></i> অ্যাপয়েন্টমেন্ট নিন
+                        </button>
+                        <a href="tel:01348980793" class="bg-white/10 hover:bg-white/20 border border-white/30 text-white font-semibold px-6 py-3.5 rounded-xl backdrop-blur-sm transition text-center text-lg">
+                            <i class="fa-solid fa-phone mr-2"></i> ০১৩৪৮-৯৮০৭৯৩
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Contact Box -->
+                <div class="lg:col-span-5">
+                    <div class="bg-white text-slate-800 rounded-2xl p-6 sm:p-8 shadow-2xl border border-slate-100">
+                        <h3 class="text-2xl font-bold text-brand-dark border-b pb-3 mb-4 flex items-center">
+                            <i class="fa-solid fa-clock-rotate-left text-brand-primary mr-3"></i> জরুরী তথ্যাবলি
+                        </h3>
+                        
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <div class="bg-brand-light p-3 rounded-lg text-brand-primary mr-3">
+                                    <i class="fa-solid fa-phone-volume text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-slate-700">হটলাইন নম্বরসমূহ</h4>
+                                    <p class="text-lg font-extrabold text-brand-red">০১৩৪৮-৯৮০৭৯৩</p>
+                                    <p class="text-lg font-extrabold text-brand-primary">০১৭৮৯-৩৬৩৬৭০</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start">
+                                <div class="bg-emerald-50 p-3 rounded-lg text-emerald-600 mr-3">
+                                    <i class="fa-solid fa-location-dot text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-slate-700">হাসপাতালের ঠিকানা</h4>
+                                    <p class="text-sm text-slate-600 leading-relaxed">
+                                        ভেদরগঞ্জ বাজার পূর্ব মাথা (পুরাতন বিদ্যুৎ অফিস ভবন), কলেজ রোড, ভেদরগঞ্জ, শরীয়তপুর।
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Doctors Section -->
+    <section id="doctors" class="py-16 bg-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl sm:text-4xl font-bold text-brand-dark">আমাদের অভিজ্ঞ বিশেষজ্ঞ চিকিৎসকবৃন্দ</h2>
+                <div class="w-24 h-1 bg-brand-primary mx-auto my-3 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Doctor 1 -->
+                <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden flex flex-col justify-between">
+                    <div>
+                        <div class="bg-brand-dark p-4 text-center text-white">
+                            <span class="bg-yellow-400 text-slate-900 text-xs font-bold px-3 py-1 rounded-full">শুক্রবার</span>
+                            <h3 class="text-xl font-bold mt-3">ডাঃ আবু মোহাম্মদ মোস্তফা কামাল (রনি)</h3>
+                            <p class="text-sm text-sky-200">কনসালটেন্ট</p>
+                        </div>
+                        <div class="p-6 text-sm text-slate-600 space-y-2">
+                            <p class="font-semibold text-slate-800">এমবিবিএস, বিসিএস (স্বাস্থ্য), এম এস (চক্ষু)</p>
+                            <p class="text-brand-primary font-medium">চক্ষু রোগ বিশেষজ্ঞ ও ফ্যাকো সার্জন</p>
+                            <p>আবাসিক সার্জন, জাতীয় চক্ষু বিজ্ঞান ইনস্টিটিউট ও হাসপাতাল</p>
+                            <div class="bg-emerald-50 p-3 rounded-lg mt-3 text-emerald-800 font-bold">
+                                প্রতি শুক্রবার: সকাল ১০:০০ টা - বিকাল ৪:০০ টা
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <button onclick="selectDoctor('ডাঃ আবু মোহাম্মদ মোস্তফা কামাল (রনি)')" class="w-full bg-brand-primary hover:bg-brand-dark text-white font-semibold py-2.5 rounded-xl transition">
+                            সিরিয়াল নিন
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Doctor 2 -->
+                <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden flex flex-col justify-between">
+                    <div>
+                        <div class="bg-brand-dark p-4 text-center text-white">
+                            <span class="bg-yellow-400 text-slate-900 text-xs font-bold px-3 py-1 rounded-full">সোমবার</span>
+                            <h3 class="text-xl font-bold mt-3">ডাঃ সুব্রত কুমার পাল</h3>
+                            <p class="text-sm text-sky-200">কনসালটেন্ট ও চক্ষু সার্জন</p>
+                        </div>
+                        <div class="p-6 text-sm text-slate-600 space-y-2">
+                            <p class="font-semibold text-slate-800">এমবিবিএস (ডি.ইউ), বিসিএস (স্বাস্থ্য), ডি-অপথ (বিএসএমএমইউ)</p>
+                            <p class="text-brand-primary font-medium">চক্ষু বিশেষজ্ঞ ও ফ্যাকো সার্জন</p>
+                            <p>গোপালগঞ্জ চক্ষু হাসপাতাল এন্ড প্রশিক্ষণ প্রতিষ্ঠান</p>
+                            <div class="bg-emerald-50 p-3 rounded-lg mt-3 text-emerald-800 font-bold">
+                                প্রতি সোমবার: সন্ধ্যা ৬:০০ টা - রাত ৮:০০ টা
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <button onclick="selectDoctor('ডাঃ সুব্রত কুমার পাল')" class="w-full bg-brand-primary hover:bg-brand-dark text-white font-semibold py-2.5 rounded-xl transition">
+                            সিরিয়াল নিন
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Doctor 3 -->
+                <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden flex flex-col justify-between">
+                    <div>
+                        <div class="bg-brand-dark p-4 text-center text-white">
+                            <span class="bg-emerald-400 text-slate-900 text-xs font-bold px-3 py-1 rounded-full">প্রতিদিন</span>
+                            <h3 class="text-xl font-bold mt-3">ডাঃ হাসিন আহমেদ</h3>
+                            <p class="text-sm text-sky-200">আর.এম.ও (RMO)</p>
+                        </div>
+                        <div class="p-6 text-sm text-slate-600 space-y-2">
+                            <p class="font-semibold text-slate-800">MBBS (Rajshahi Medical University), PGT (Eye)</p>
+                            <p class="text-brand-primary font-medium">BMDC Reg No: A-145676</p>
+                            <p>ভেদরগঞ্জ ইসলামিয়া চক্ষু হাসপাতাল</p>
+                            <div class="bg-emerald-50 p-3 rounded-lg mt-3 text-emerald-800 font-bold">
+                                প্রতিদিন: সকাল ১০:০০ টা - রাত ৮:০০ টা
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <button onclick="selectDoctor('ডাঃ হাসিন আহমেদ')" class="w-full bg-brand-primary hover:bg-brand-dark text-white font-semibold py-2.5 rounded-xl transition">
+                            সিরিয়াল নিন
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl sm:text-4xl font-bold text-brand-dark">আমাদের সেবাসমূহ</h2>
+                <div class="w-24 h-1 bg-brand-primary mx-auto my-3 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200">
+                    <i class="fa-solid fa-desktop text-3xl text-brand-primary mb-3"></i>
+                    <h3 class="text-xl font-bold text-brand-dark mb-1">কম্পিউটারে চক্ষু পরীক্ষা</h3>
+                    <p class="text-slate-600 text-sm">Autorefraction মেশিনের সাহায্যে নির্ভুল পাওয়ার পাওয়ার নির্ধারণ।</p>
+                </div>
+                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200">
+                    <i class="fa-solid fa-eye-dropper text-3xl text-brand-primary mb-3"></i>
+                    <h3 class="text-xl font-bold text-brand-dark mb-1">চোখের প্রেসার পরীক্ষা (IOP)</h3>
+                    <p class="text-slate-600 text-sm">গ্লুকোমা সনাক্তকরণের আধুনিক ডিজিটাল পরীক্ষা।</p>
+                </div>
+                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200">
+                    <i class="fa-solid fa-scissors text-3xl text-brand-primary mb-3"></i>
+                    <h3 class="text-xl font-bold text-brand-dark mb-1">সেলাই বিহীন ছানি অপারেশন</h3>
+                    <p class="text-slate-600 text-sm">ফ্যাকো (Phaco) প্রযুক্তিতে নিখুঁত চোখের ছানি অপারেশন।</p>
+                </div>
+                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200">
+                    <i class="fa-solid fa-hospital-user text-3xl text-brand-primary mb-3"></i>
+                    <h3 class="text-xl font-bold text-brand-dark mb-1">নেত্রনালী পরীক্ষা ও অপারেশন</h3>
+                    <p class="text-slate-600 text-sm">DCT ও DCR অপারেশনের মাধ্যমে নেত্রনালীর সমস্যা দূরীকরণ।</p>
+                </div>
+                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200">
+                    <i class="fa-solid fa-glasses text-3xl text-brand-primary mb-3"></i>
+                    <h3 class="text-xl font-bold text-brand-dark mb-1">আধুনিক চশমা ও লেন্স</h3>
+                    <p class="text-slate-600 text-sm">ব্লু-কাট ও অ্যান্টি-গ্লেয়ার লেন্সসহ ব্র্যান্ডেড ফ্রেম।</p>
+                </div>
+                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200">
+                    <i class="fa-solid fa-laptop-medical text-3xl text-brand-primary mb-3"></i>
+                    <h3 class="text-xl font-bold text-brand-dark mb-1">কম্পিউটার ভিশন সিনড্রোম</h3>
+                    <p class="text-slate-600 text-sm">মোবাইল-কম্পিউটার ব্যবহারের দরুন চোখের ক্লান্তি দূরীকরণ সেবা।</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-slate-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center sm:text-left">
+            <h2 class="text-3xl font-bold text-white mb-6">যোগাযোগ ও ঠিকানা</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <p class="text-lg font-semibold text-slate-300 mb-2">ভেদরগঞ্জ ইসলামিয়া চক্ষু হাসপাতাল</p>
+                    <p class="text-slate-400 mb-4">ভেদরগঞ্জ বাজার পূর্ব মাথা (পুরাতন বিদ্যুৎ অফিস ভবন), কলেজ রোড, ভেদরগঞ্জ, শরীয়তপুর।</p>
+                    <p class="text-xl font-bold text-emerald-400 mb-1">ফোন: ০১৩৪৮-৯৮০৭৯৩</p>
+                    <p class="text-xl font-bold text-emerald-400">সিরিয়াল: ০১৭৮৯-৩৬৩৬৭০</p>
+                </div>
+                <div class="bg-slate-800 p-6 rounded-2xl border border-slate-700 flex items-center justify-center">
+                    <p class="text-slate-300">প্রতিদিন সকাল ১০:০০ টা থেকে রাত ৮:০০ টা পর্যন্ত খোলা থাকে।</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal Form -->
+    <div id="bookingModal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-lg w-full p-6 shadow-2xl relative text-slate-800">
+            <button onclick="closeBookingModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600 text-xl font-bold">&times;</button>
+            <h3 class="text-2xl font-bold text-brand-dark mb-4">সিরিয়াল বুকিং ফরম</h3>
+
+            <form id="appointmentForm" onsubmit="handleFormSubmit(event)" class="space-y-4">
+                <div>
+                    <label class="block text-sm font-semibold mb-1">রোগীর নাম *</label>
+                    <input type="text" required class="w-full px-4 py-2 rounded-lg border border-slate-300">
+                </div>
+                <div>
+                    <label class="block text-sm font-semibold mb-1">মোবাইল নম্বর *</label>
+                    <input type="tel" required class="w-full px-4 py-2 rounded-lg border border-slate-300">
+                </div>
+                <div>
+                    <label class="block text-sm font-semibold mb-1">ডাক্তার নির্বাচন করুন *</label>
+                    <select id="doctorSelect" class="w-full px-4 py-2 rounded-lg border border-slate-300">
+                        <option value="ডাঃ আবু মোহাম্মদ মোস্তফা কামাল (রনি)">ডাঃ আবু মোহাম্মদ মোস্তফা কামাল (রনি) [শুক্রবার]</option>
+                        <option value="ডাঃ সুব্রত কুমার পাল">ডাঃ সুব্রত কুমার পাল [সোমবার]</option>
+                        <option value="ডাঃ হাসিন আহমেদ">ডাঃ হাসিন আহমেদ [প্রতিদিন]</option>
+                    </select>
+                </div>
+                <button type="submit" class="w-full bg-brand-red text-white font-bold py-3 rounded-xl shadow">বুকিং সাবমিট করুন</button>
+            </form>
+
+            <div id="successMessage" class="hidden text-center py-6">
+                <h4 class="text-2xl font-bold text-emerald-600 mb-2">ধন্যবাদ!</h4>
+                <p class="text-slate-600 text-sm mb-4">আপনার সিরিয়াল তথ্য জমা হয়েছে। দ্রুতই যোগাযোগ করা হবে।</p>
+                <button onclick="closeBookingModal()" class="bg-brand-primary text-white px-6 py-2 rounded-lg">ঠিক আছে</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleMobileMenu() {
+            document.getElementById('mobileMenu').classList.toggle('hidden');
+        }
+        function openBookingModal() {
+            document.getElementById('bookingModal').classList.remove('hidden');
+            document.getElementById('appointmentForm').classList.remove('hidden');
+            document.getElementById('successMessage').classList.add('hidden');
+        }
+        function closeBookingModal() {
+            document.getElementById('bookingModal').classList.add('hidden');
+        }
+        function selectDoctor(doctorName) {
+            openBookingModal();
+            document.getElementById('doctorSelect').value = doctorName;
+        }
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            document.getElementById('appointmentForm').classList.add('hidden');
+            document.getElementById('successMessage').classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
