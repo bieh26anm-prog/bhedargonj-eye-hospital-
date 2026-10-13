@@ -31,3 +31,12 @@
 - ফর্মের তথ্য WhatsApp-এ বার্তা হিসেবে প্রস্তুত হয়; ব্যবহারকারীকে WhatsApp-এ Send চাপতে হবে।
 - ফোন, WhatsApp, লোকেশন ও Facebook search link যুক্ত হয়েছে।
 - এটি static website, তাই রোগীর তথ্য সংরক্ষণ/দেখার নিরাপদ admin panel এতে নেই। প্রকৃত admin panel-এর জন্য server/database এবং নিরাপদ login দরকার।
+
+
+## লোগো ও ডিভাইস সাপোর্ট
+
+- আপনার দেওয়া BIEH লোগোটি `assets/hospital-logo.png` হিসেবে যুক্ত করা হয়েছে।
+- ওয়েবসাইটটি মোবাইল, ট্যাবলেট ও কম্পিউটারের স্ক্রিন অনুযায়ী রেসপনসিভ।
+- GitHub Pages-এ প্রকাশ করতে ZIP থেকে ফাইলগুলো বের করে `index.html`, `style.css`, `script.js`, `README.md` এবং `assets` ফোল্ডার একই repository root-এ আপলোড করুন।
+
+- হাসপাতাল থেকে দেওয়া প্রচারপত্র `assets/hospital-promo-banner.jpg` হিসেবে যুক্ত করা হয়েছে; এটি মোবাইল ও কম্পিউটার উভয় স্ক্রিনে স্বয়ংক্রিয়ভাবে মানিয়ে নেবে।

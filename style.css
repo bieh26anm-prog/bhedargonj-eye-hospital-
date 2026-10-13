@@ -6,3 +6,10 @@
 /* Online booking form */
 .booking-section{background:#f3f8fc}.booking-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:50px;align-items:start}.booking-copy h2{font-size:clamp(30px,3.6vw,43px);line-height:1.25;color:var(--navy);margin:12px 0}.booking-copy p{color:var(--muted);font-size:16px}.booking-note{display:flex;gap:10px;align-items:center;flex-wrap:wrap;color:var(--green);font-size:13px;font-weight:700;margin-top:24px}.booking-note span{background:#e1f5e9;border-radius:50%;width:22px;height:22px;display:grid;place-items:center}.booking-form{background:#fff;border:1px solid #dfe9f1;border-radius:22px;padding:27px;box-shadow:0 15px 40px #153b5c0b}.booking-form label{display:block;font-size:14px;font-weight:700;color:#253d5b;margin:0 0 6px}.booking-form input,.booking-form select,.booking-form textarea{font:inherit;font-size:14px;width:100%;border:1px solid #d6e2ec;border-radius:10px;padding:11px 12px;background:#fff;color:#18324f;outline:none;margin-bottom:15px}.booking-form input:focus,.booking-form select:focus,.booking-form textarea:focus{border-color:#1680bd;box-shadow:0 0 0 3px #1680bd17}.form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}.booking-submit{width:100%;border:0;cursor:pointer;font:inherit;font-weight:700}.form-small,.form-status{font-size:12px;color:#718197;margin:11px 0 0}.form-status{color:var(--green);font-weight:700}.contact-grid .btn-light{margin-left:8px}
 @media(max-width:700px){.booking-grid{grid-template-columns:1fr;gap:22px}.booking-form{padding:20px 16px}.form-row{grid-template-columns:1fr;gap:0}.booking-copy h2{font-size:32px}.contact-grid .btn-light{margin-left:0;margin-top:10px}.mobile-call-bar a{font-size:12px;padding:10px 5px}}
+
+
+/* Responsive hospital promotional poster supplied by the hospital */
+.promo-banner-section{padding:18px 0 8px;background:#f4f9fd}
+.promo-banner-wrap{max-width:1120px}
+.promo-banner-image{display:block;width:100%;height:auto;object-fit:contain;border-radius:16px;border:1px solid #dbe8f2;box-shadow:0 12px 34px rgba(6,59,131,.10)}
+@media(max-width:700px){.promo-banner-section{padding:10px 0 4px}.promo-banner-image{border-radius:10px}}
