@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="bn" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ভেদরগঞ্জ ইসলামিয়া চক্ষু হাসপাতাল - Bhedarganj Islamia Eye Hospital</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Inter & SolaimanLipi / Hind Siliguri -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        medical: {
+                            50: '#eef8ff',
+                            100: '#d8edfe',
+                            500: '#0284c7',
+                            600: '#026aa2',
+                            700: '#035381',
+                            900: '#0b3558',
+                        },
+                        eyeGreen: {
+                            500: '#10b981',
+                            600: '#059669',
+                            700: '#047857'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'Hind Siliguri', 'sans-serif'],
+                        bengali: ['Hind Siliguri', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Hind Siliguri', 'Inter', sans-serif;
+        }
+        .hero-pattern {
+            background: linear-gradient(135deg, rgba(2, 132, 199, 0.95) 0%, rgba(3, 83, 129, 0.92) 100%), url('https://placehold.co/1920x1080/026aa2/ffffff?text=Eye+Hospital') center/cover;
+        }
+        .pulse-badge {
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
+            70% { transform: scale(1.03); box-shadow: 0 0 0 10px rgba(16, 185, 129, 0); }
+            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-medical-500 selection:text-white">
+
+    <div class="bg-medical-900 text-white text-xs sm:text-sm py-2 px-4 shadow-inner">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+            <div class="flex items-center gap-3">
+                <span class="flex h-2.5 w-2.5 relative">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
+                </span>
+                <span class="font-medium">বিসমিল্লাহির রহমানির রাহিম | সুস্থ চোখ, সুন্দর জীবন</span>
+            </div>
+            <div class="flex items-center gap-4">
+                <a href="tel:01348980793" class="hover:text-emerald-400 transition flex items-center gap-1.5 font-semibold">
+                    <i class="fa-solid fa-phone-volume text-emerald-400"></i> হটলাইন: 01348-980793
+                </a>
+                <span class="text-slate-500 hidden sm:inline">|</span>
+                <a href="tel:01789363670" class="hover:text-emerald-400 transition flex items-center gap-1.5 font-semibold">
+                    <i class="fa-solid fa-calendar-check text-emerald-400"></i> সিরিয়াল: 01789-363670
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-md border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex items-center justify-between">
+            <!-- Brand Logo & Title -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-medical-50 border-2 border-medical-500 flex items-center justify-center overflow-hidden shadow-sm">
+                    <!-- Logo image from user prompt assets with reliable placeholder fallback -->
+                    <img src="20044.png" alt="BIEH Logo" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/120x120/0284c7/ffffff?text=BIEH'">
+                </div>
+                <div>
+                    <h1 class="text-lg sm:text-2xl font-bold text-medical-900 group-hover:text-medical-600 transition leading-tight">ভেদরগঞ্জ ইসলামিয়া চক্ষু হাসপাতাল</h1>
+                    <p class="text-xs sm:text-sm text-slate-500 font-medium">Bhedarganj Islamia Eye Hospital, Shariatpur</p>
+                </div>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden md:flex items-center gap-6 font-medium text-slate-700">
+                <a href="#home" class="hover:text-medical-600 transition">হোম</a>
+                <a href="#doctors" class="hover:text-medical-600 transition">ডাক্তারগণ</a>
+                <a href="#services" class="hover:text-medical-600 transition">সেবা সমুহ</a>
+                <a href="#about" class="hover:text-medical-600 transition">আমাদের সম্পর্কে</a>
+                <a href="#contact" class="hover:text-medical-600 transition">যোগাযোগ</a>
+            </nav>
+
+            <!-- CTA Action Button -->
+            <div class="hidden sm:flex items-center gap-3">
+                <a href="tel:01789363670" class="bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2.5 rounded-xl font-semibold text-sm shadow-lg shadow-emerald-600/20 transition flex items-center gap-2 pulse-badge">
+                    <i class="fa-solid fa-calendar-plus"></i> সিরিয়াল নিন
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobileMenuBtn" class="md:hidden text-slate-700 text-2xl focus:outline-none p-2">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Dropdown Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-4 space-y-3 shadow-lg">
+            <a href="#home" class="block py-2 text-slate-700 font-medium hover:text-medical-600 border-b border-slate-100">হোম</a>
+            <a href="#doctors" class="block py-2 text-slate-700 font-medium hover:text-medical-600 border-b border-slate-100">ডাক্তারগণ</a>
+            <a href="#services" class="block py-2 text-slate-700 font-medium hover:text-medical-600 border-b border-slate-100">সেবা সমুহ</a>
+            <a href="#about" class="block py-2 text-slate-700 font-medium hover:text-medical-600 border-b border-slate-100">আমাদের সম্পর্কে</a>
+            <a href="#contact" class="block py-2 text-slate-700 font-medium hover:text-medical-600 border-b border-slate-100">যোগাযোগ</a>
+            <a href="tel:01789363670" class="w-full bg-emerald-600 text-white text-center py-2.5 rounded-xl font-semibold block shadow">
+                <i class="fa-solid fa-phone mr-2"></i> সিরিয়াল নিন: 01789-363670
+            </a>
+        </div>
+    </header>
+
+    <section id="home" class="hero-pattern text-white py-16 sm:py-24 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md px-4 py-1.5 rounded-full text-emerald-300 text-sm font-semibold border border-white/20">
+                        <i class="fa-solid fa-eye"></span></i> নির্ভরযোগ্য আধুনিক চক্ষু চিকিৎসা কেন্দ্র
+                    </div>
+                    <h2 class="text-3xl sm:text-5xl lg:text-6xl font-bold leading-tight tracking-tight">
+                        আপনার চোখের সুস্থতাই <br/><span class="text-emerald-400">আমাদের অঙ্গীকার</span>
+                    </h2>
+                    <p class="text-lg sm:text-xl text-slate-100 font-light max-w-2xl mx-auto lg:mx-0">
+                        অভিজ্ঞ ও বিশেষজ্ঞ সার্জনদের মাধ্যমে চোখের যাবতীয় পরীক্ষা, ছানি অপারেশন এবং বিশ্বমানের পরামর্শ সেবা এখন ভেদরগঞ্জে।
+                    </p>
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+                        <a href="tel:01789363670" class="w-full sm:w-auto bg-emerald-500 hover:bg-emerald-600 text-white px-8 py-3.5 rounded-2xl font-bold text-base shadow-xl shadow-emerald-500/30 transition flex items-center justify-center gap-3">
+                            <i class="fa-solid fa-phone-volume text-xl"></i> এখনই সিরিয়াল বুক করুন
+                        </a>
+                        <a href="#doctors" class="w-full sm:w-auto bg-white/10 hover:bg-white/20 text-white border border-white/30 backdrop-blur-md px-8 py-3.5 rounded-2xl font-semibold text-base transition flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-user-doctor"></i> ডাক্তারদের সময়সূচী
+                        </a>
+                    </div>
+                    <div class="pt-6 flex items-center justify-center lg:justify-start gap-6 text-sm text-slate-200">
+                        <div class="flex items-center gap-2">
+                            <i class="fa-solid fa-circle-check text-emerald-400"></i> অভিজ্ঞ ডাক্তার
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fa-solid fa-circle-check text-emerald-400"></i> আধুনিক যন্ত্রপাতি
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fa-solid fa-circle-check text-emerald-400"></i> নির্ভরযোগ্য সেবা
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Highlight Card -->
+                <div class="lg:col-span-5">
+                    <div class="bg-white text-slate-800 rounded-3xl p-6 sm:p-8 shadow-2xl border border-white/20 relative">
+                        <div class="absolute -top-4 -right-4 bg-emerald-600 text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-md uppercase tracking-wider">
+                            বিশেষ অফার / ভিজিট
+                        </div>
+                        <div class="text-center pb-6 border-b border-slate-100">
+                            <div class="w-20 h-20 bg-medical-50 text-medical-600 rounded-full flex items-center justify-center text-3xl mx-auto mb-3 shadow-inner">
+                                <i class="fa-solid fa-hospital-user"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-medical-900">জরুরী চিকিৎসা ও সেবা</h3>
+                            <p class="text-sm text-slate-500 mt-1">সপ্তাহের ৭ দিনই আমাদের সেবা চালু রয়েছে</p>
+                        </div>
+                        <div class="py-6 space-y-4">
+                            <div class="flex items-center justify-between p-3 bg-slate-50 rounded-xl">
+                                <span class="text-sm font-semibold text-slate-700">হটলাইন নম্বর:</span>
+                                <a href="tel:01348980793" class="text-medical-600 font-bold hover:underline">01348-980793</a>
+                            </div>
+                            <div class="flex items-center justify-between p-3 bg-slate-50 rounded-xl">
+                                <span class="text-sm font-semibold text-slate-700">সিরিয়াল নম্বর:</span>
+                                <a href="tel:01789363670" class="text-emerald-600 font-bold hover:underline">01789-363670</a>
+                            </div>
+                            <div class="p-3 bg-medical-50 rounded-xl border border-medical-100 text-center">
+                                <p class="text-xs text-medical-900 font-medium">লোকেশন: ভেদরগঞ্জ বাজার পূর্ব মাথা (পুরাতন বিদ্যুৎ অফিস ভবন), কলেজ রোড, ভেদরগঞ্জ, শরীয়তপুর।</p>
+                            </div>
+                        </div>
+                        <a href="tel:01348980793" class="w-full bg-medical-600 hover:bg-medical-700 text-white py-3 rounded-xl font-bold text-center block transition shadow-md">
+                            <i class="fa-solid fa-phone mr-2"></i> এখনই কল করুন
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-16 sm:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                <span class="text-medical-600 font-bold text-sm tracking-widest uppercase bg-medical-50 px-3 py-1 rounded-full">আমাদের সেবাসমূহ</span>
+                <h2 class="text-3xl sm:text-4xl font-bold text-medical-900">আপনার চোখের যত্নে আমরা দিচ্ছি সর্বাধুনিক সেবা</h2>
+                <p class="text-slate-600">অভিজ্ঞ চক্ষু বিশেষজ্ঞ ও আধুনিক প্রযুক্তির সমন্বয়ে আমাদের হাসপাতালে প্রদানকৃত সেবাসমূহ</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-slate-50 hover:bg-medical-50/50 p-8 rounded-3xl border border-slate-100 hover:border-medical-200 transition-all duration-300 shadow-sm hover:shadow-xl group">
+                    <div class="w-16 h-16 bg-medical-100 text-medical-600 rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:scale-110 group-hover:bg-medical-600 group-hover:text-white transition duration-300">
+                        <i class="fa-solid fa-user-doctor"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">অভিজ্ঞ ডাঃ দের মাধ্যমে চিকিৎসা</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">জাতীয় চক্ষু বিজ্ঞান ইনস্টিটিউট ও দেশের স্বনামধন্য হাসপাতালের অভিজ্ঞ ডাক্তারগণ নিয়মিত রোগী দেখেন।</p>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-slate-50 hover:bg-medical-50/50 p-8 rounded-3xl border border-slate-100 hover:border-medical-200 transition-all duration-300 shadow-sm hover:shadow-xl group">
+                    <div class="w-16 h-16 bg-medical-100 text-medical-600 rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:scale-110 group-hover:bg-medical-600 group-hover:text-white transition duration-300">
+                        <i class="fa-solid fa-stethoscope"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">বিশেষজ্ঞ ও সার্জনদের পরামর্শ</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">চোখের যেকোনো জটিল সমস্যায় বিশেষজ্ঞ ফাকো সার্জনদের কাছ থেকে নিন নিখুঁত পরামর্শ ও চিকিৎসা।</p>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-slate-50 hover:bg-medical-50/50 p-8 rounded-3xl border border-slate-100 hover:border-medical-200 transition-all duration-300 shadow-sm hover:shadow-xl group">
+                    <div class="w-16 h-16 bg-medical-100 text-medical-600 rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:scale-110 group-hover:bg-medical-600 group-hover:text-white transition duration-300">
+                        <i class="fa-solid fa-syringe"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">সকল প্রকার চোখের অপারেশন</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">সেলাই বিহীন আধুনিক পদ্ধতিতে চোখের ছানি অপারেশনসহ সকল ধরনের অপারেশন বিশ্বস্ততার সাথে সম্পন্ন করা হয়।</p>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="bg-slate-50 hover:bg-medical-50/50 p-8 rounded-3xl border border-slate-100 hover:border-medical-200 transition-all duration-300 shadow-sm hover:shadow-xl group">
+                    <div class="w-16 h-16 bg-medical-100 text-medical-600 rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:scale-110 group-hover:bg-medical-600 group-hover:text-white transition duration-300">
+                        <i class="fa-solid fa-pills"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">নির্ভরযোগ্য ভিশন ফার্মেসি</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">চোখের সকল প্রকার অরিজিনাল ও মানসম্মত ড্রপ ও ওষুধ পাওয়া যায় আমাদের নিজস্ব ফার্মেসিতে।</p>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="bg-slate-50 hover:bg-medical-50/50 p-8 rounded-3xl border border-slate-100 hover:border-medical-200 transition-all duration-300 shadow-sm hover:shadow-xl group">
+                    <div class="w-16 h-16 bg-medical-100 text-medical-600 rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:scale-110 group-hover:bg-medical-600 group-hover:text-white transition duration-300">
+                        <i class="fa-solid fa-glasses"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">চশমা ফ্রেম ও গ্লাস</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">আধুনিক ও আকর্ষণীয় ডিজাইনের চশমার ফ্রেম এবং চোখের পাওয়ার অনুযায়ী নিখুঁত গ্লাস তৈরি করা হয়।</p>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="bg-slate-50 hover:bg-medical-50/50 p-8 rounded-3xl border border-slate-100 hover:border-medical-200 transition-all duration-300 shadow-sm hover:shadow-xl group">
+                    <div class="w-16 h-16 bg-medical-100 text-medical-600 rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:scale-110 group-hover:bg-medical-600 group-hover:text-white transition duration-300">
+                        <i class="fa-solid fa-microscope"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">কম্পিউটারে চক্ষু পরীক্ষা ও অন্যান্য</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">অটোরেফ্র্যাকশন (Autorefraction), আইওপি (IOP), নেত্রনালী পরীক্ষা (DCT/DCR), গ্লুকোমা ও ভিশন সিনড্রোম পরীক্ষা।</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="doctors" class="py-16 sm:py-24 bg-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                <span class="text-emerald-600 font-bold text-sm tracking-widest uppercase bg-emerald-50 px-3 py-1 rounded-full">আমাদের বিশেষজ্ঞ চিকিৎসকবৃন্দ</span>
+                <h2 class="text-3xl sm:text-4xl font-bold text-medical-900">অভিজ্ঞ ডাক্তারগণের সময়সূচী</h2>
+                <p class="text-slate-600">আপনার সুবিধাজনক সময়ে ডাক্তারের পরামর্শ নিতে সিরিয়াল বুক করুন</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- Doctor 1: Dr. Subrata Kumar Pal -->
+                <div class="bg-white rounded-3xl overflow-hidden shadow-lg border border-slate-200 flex flex-col justify-between hover:shadow-2xl transition">
+                    <div>
+                        <div class="relative bg-medical-600 p-6 text-white text-center">
+                            <div class="w-32 h-32 mx-auto rounded-full border-4 border-white shadow-md overflow-hidden bg-white mb-4">
+                                <img src="19990.png" alt="ডাঃ সুব্রত কুমার পাল" class="w-full h-full object-cover object-top" onerror="this.src='https://placehold.co/300x300/0284c7/ffffff?text=Dr.+Subrata'">
+                            </div>
+                            <h3 class="text-xl font-bold">ডাঃ সুব্রত কুমার পাল</h3>
+                            <p class="text-xs text-emerald-300 font-semibold mt-1">এমবিবিএস (ডি.ইউ), বিসিএস (স্বাস্থ্য), ডি-অপথ (বিএসএমএমইউ)</p>
+                        </div>
+                        <div class="p-6 space-y-4">
+                            <div class="bg-slate-50 p-3.5 rounded-2xl border border-slate-100 text-center">
+                                <span class="text-xs text-slate-500 block uppercase font-bold tracking-wider">পদবী ও বিশেষত্ব</span>
+                                <p class="text-sm font-bold text-medical-900 mt-1">চক্ষু বিশেষজ্ঞ ও ফাকো সার্জন</p>
+                                <p class="text-xs text-slate-600 mt-0.5">গোপালগঞ্জ চক্ষু হাসপাতাল এন্ড প্রশিক্ষণ প্রতিষ্ঠান।</p>
+                            </div>
+                            <div class="space-y-2 text-sm text-slate-700">
+                                <div class="flex items-center gap-3 bg-emerald-50 text-emerald-800 p-3 rounded-xl font-semibold">
+                                    <i class="fa-solid fa-calendar-days text-emerald-600"></i>
+                                    <span>রোগী দেখবেন: প্রতি সোমবার</span>
+                                </div>
+                                <div class="flex items-center gap-3 bg-slate-50 p-3 rounded-xl">
+                                    <i class="fa-solid fa-clock text-medical-600"></i>
+                                    <span>সময়: সন্ধ্যা ৬টা হতে রাত ৮টা পর্যন্ত</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <a href="tel:01789363670" class="w-full bg-medical-600 hover:bg-medical-700 text-white font-bold py-3 rounded-xl text-center block transition shadow">
+                            <i class="fa-solid fa-phone mr-2"></i> সিরিয়াল নিন
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Doctor 2: Dr. Abu Mohammad Mostofa Kamal (Roni) -->
+                <div class="bg-white rounded-3xl overflow-hidden shadow-lg border border-slate-200 flex flex-col justify-between hover:shadow-2xl transition">
+                    <div>
+                        <div class="relative bg-medical-600 p-6 text-white text-center">
+                            <div class="w-32 h-32 mx-auto rounded-full border-4 border-white shadow-md overflow-hidden bg-white mb-4">
+                                <img src="19988.png" alt="ডাঃ আবু মোহাম্মদ মোস্তফা কামাল (রনি)" class="w-full h-full object-cover object-top" onerror="this.src='https://placehold.co/300x300/0284c7/ffffff?text=Dr.+Mostofa'">
+                            </div>
+                            <h3 class="text-xl font-bold">ডাঃ আবু মোহাম্মদ মোস্তফা কামাল (রনি)</h3>
+                            <p class="text-xs text-emerald-300 font-semibold mt-1">এমবিবিএস, বিসিএস (স্বাস্থ্য), এম এস (চক্ষু)</p>
+                        </div>
+                        <div class="p-6 space-y-4">
+                            <div class="bg-slate-50 p-3.5 rounded-2xl border border-slate-100 text-center">
+                                <span class="text-xs text-slate-500 block uppercase font-bold tracking-wider">পদবী ও বিশেষত্ব</span>
+                                <p class="text-sm font-bold text-medical-900 mt-1">চক্ষু রোগ বিশেষজ্ঞ ও ফাকো সার্জন</p>
+                                <p class="text-xs text-slate-600 mt-0.5">আবাসিক সার্জন, জাতীয় চক্ষু বিজ্ঞান ইনস্টিটিউট ও হাসপাতাল।</p>
+                            </div>
+                            <div class="space-y-2 text-sm text-slate-700">
+                                <div class="flex items-center gap-3 bg-emerald-50 text-emerald-800 p-3 rounded-xl font-semibold">
+                                    <i class="fa-solid fa-calendar-days text-emerald-600"></i>
+                                    <span>রোগী দেখবেন: প্রতি শুক্রবার</span>
+                                </div>
+                                <div class="flex items-center gap-3 bg-slate-50 p-3 rounded-xl">
+                                    <i class="fa-solid fa-clock text-medical-600"></i>
+                                    <span>সময়: সকাল ১০টা থেকে বিকাল ৪টা পর্যন্ত</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <a href="tel:01789363670" class="w-full bg-medical-600 hover:bg-medical-700 text-white font-bold py-3 rounded-xl text-center block transition shadow">
+                            <i class="fa-solid fa-phone mr-2"></i> সিরিয়াল নিন
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Doctor 3: Dr. Hasin Ahmed -->
+                <div class="bg-white rounded-3xl overflow-hidden shadow-lg border border-slate-200 flex flex-col justify-between hover:shadow-2xl transition">
+                    <div>
+                        <div class="relative bg-medical-600 p-6 text-white text-center">
+                            <div class="absolute top-4 right-4 bg-amber-500 text-slate-900 text-xs font-bold px-2.5 py-1 rounded-full shadow">
+                                ভিজিট মাত্র ৯০/-
+                            </div>
+                            <div class="w-32 h-32 mx-auto rounded-full border-4 border-white shadow-md overflow-hidden bg-white mb-4">
+                                <img src="15895.jpg" alt="ডাঃ হাসিন আহমেদ" class="w-full h-full object-cover object-top" onerror="this.src='https://placehold.co/300x300/0284c7/ffffff?text=Dr.+Hasin'">
+                            </div>
+                            <h3 class="text-xl font-bold">ডাঃ হাসিন আহমেদ</h3>
+                            <p class="text-xs text-emerald-300 font-semibold mt-1">MBBS (Rajshahi), PGT (Eye), BMDC: A-145676</p>
+                        </div>
+                        <div class="p-6 space-y-4">
+                            <div class="bg-slate-50 p-3.5 rounded-2xl border border-slate-100 text-center">
+                                <span class="text-xs text-slate-500 block uppercase font-bold tracking-wider">পদবী ও বিশেষত্ব</span>
+                                <p class="text-sm font-bold text-medical-900 mt-1">আরএমও (RMO)</p>
+                                <p class="text-xs text-slate-600 mt-0.5">ভেদরগঞ্জ ইসলামিয়া চক্ষু হাসপাতাল।</p>
+                            </div>
+                            <div class="space-y-2 text-sm text-slate-700">
+                                <div class="flex items-center gap-3 bg-emerald-50 text-emerald-800 p-3 rounded-xl font-semibold">
+                                    <i class="fa-solid fa-calendar-days text-emerald-600"></i>
+                                    <span>রোগী দেখবেন: প্রতিদিন (সপ্তাহের ৭ দিন)</span>
+                                </div>
+                                <div class="flex items-center gap-3 bg-slate-50 p-3 rounded-xl">
+                                    <i class="fa-solid fa-clock text-medical-600"></i>
+                                    <span>সময়: সকাল ১০টা থেকে রাত ৮টা পর্যন্ত</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <a href="tel:01789363670" class="w-full bg-medical-600 hover:bg-medical-700 text-white font-bold py-3 rounded-xl text-center block transition shadow">
+                            <i class="fa-solid fa-phone mr-2"></i> সিরিয়াল নিন
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-16 sm:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-medical-900 rounded-3xl p-8 sm:p-12 text-white shadow-2xl relative overflow-hidden">
+                <div class="absolute -right-20 -bottom-20 w-80 h-80 bg-medical-700/30 rounded-full blur-3xl pointer-events-none"></div>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
+                    <div class="space-y-6">
+                        <span class="bg-emerald-500 text-white text-xs font-bold px-3.5 py-1.5 rounded-full uppercase tracking-wider">যোগাযোগ ও সিরিয়াল</span>
+                        <h2 class="text-3xl sm:text-4xl font-bold leading-tight">জরুরী প্রয়োজনে আজই আমাদের সাথে যোগাযোগ করুন</h2>
+                        <p class="text-slate-300">আমাদের হাসপাতালে যেকোনো চোখের সমস্যার সুচিকিৎসা পেতে নিচের নম্বরে কল করুন অথবা সরাসরি হাসপাতালে চলে আসুন।</p>
+                        
+                        <div class="space-y-4 pt-2">
+                            <div class="flex items-center gap-4 bg-white/10 p-4 rounded-2xl backdrop-blur-md border border-white/10">
+                                <div class="w-12 h-12 bg-emerald-500 text-white rounded-xl flex items-center justify-center text-xl shrink-0">
+                                    <i class="fa-solid fa-phone-volume"></i>
+                                </div>
+                                <div>
+                                    <span class="text-xs text-slate-300 block">হটলাইন ও তথ্য</span>
+                                    <a href="tel:01348980793" class="text-lg sm:text-xl font-bold text-white hover:text-emerald-400">01348-980793</a>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center gap-4 bg-white/10 p-4 rounded-2xl backdrop-blur-md border border-white/10">
+                                <div class="w-12 h-12 bg-medical-500 text-white rounded-xl flex items-center justify-center text-xl shrink-0">
+                                    <i class="fa-solid fa-calendar-check"></i>
+                                </div>
+                                <div>
+                                    <span class="text-xs text-slate-300 block">সিরিয়ালের জন্য</span>
+                                    <a href="tel:01789363670" class="text-lg sm:text-xl font-bold text-white hover:text-emerald-400">01789-363670</a>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center gap-4 bg-white/10 p-4 rounded-2xl backdrop-blur-md border border-white/10">
+                                <div class="w-12 h-12 bg-amber-500 text-white rounded-xl flex items-center justify-center text-xl shrink-0">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                </div>
+                                <div>
+                                    <span class="text-xs text-slate-300 block">হাসপাতালের ঠিকানা</span>
+                                    <p class="text-sm font-semibold text-white">ভেদরগঞ্জ বাজার পূর্ব মাথা (পুরাতন বিদ্যুৎ অফিস ভবন), কলেজ রোড, ভেদরগঞ্জ, শরীয়তপুর।</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Quick Appointment Form (Interactive Modal / Widget) -->
+                    <div class="bg-white text-slate-800 p-6 sm:p-8 rounded-3xl shadow-xl">
+                        <h3 class="text-2xl font-bold text-medical-900 mb-2">অনলাইন সিরিয়াল রিকুয়েস্ট</h3>
+                        <p class="text-sm text-slate-500 mb-6">ফর্মটি পূরণ করুন অথবা সরাসরি নাম্বারে কল করুন।</p>
+                        
+                        <form id="appointmentForm" onsubmit="handleBooking(event)" class="space-y-4">
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 uppercase mb-1">রোগীর নাম *</label>
+                                <input type="text" id="patientName" required class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-medical-500 focus:outline-none text-sm" placeholder="আপনার নাম লিখুন">
+                            </div>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-bold text-slate-700 uppercase mb-1">মোবাইল নম্বর *</label>
+                                    <input type="tel" id="patientPhone" required class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-medical-500 focus:outline-none text-sm" placeholder="01XXX XXXXXX">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-bold text-slate-700 uppercase mb-1">ডাক্তার নির্বাচন করুন</label>
+                                    <select id="doctorSelect" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-medical-500 focus:outline-none text-sm bg-white">
+                                        <option value="ডাঃ হাসিন আহমেদ">ডাঃ হাসিন আহমেদ (প্রতিদিন)</option>
+                                        <option value="ডাঃ সুব্রত কুমার পাল">ডাঃ সুব্রত কুমার পাল (সোমবার)</option>
+                                        <option value="ডাঃ আবু মোহাম্মদ মোস্তফা কামাল (রনি)">ডাঃ আবু মোহাম্মদ মোস্তফা কামাল (শুক্রবার)</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 uppercase mb-1">সমস্যা বা বিবরণ (ঐচ্ছিক)</label>
+                                <textarea id="patientProblem" rows="3" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-medical-500 focus:outline-none text-sm" placeholder="চোখের সমস্যা সংক্ষেপে লিখুন..."></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white py-3.5 rounded-xl font-bold transition shadow-lg shadow-emerald-600/30">
+                                সিরিয়াল রিকুয়েস্ট পাঠান
+                            </button>
+                        </form>
+
+                        <div id="successMessage" class="hidden mt-4 p-4 bg-emerald-50 text-emerald-800 rounded-xl text-center text-sm font-semibold border border-emerald-200">
+                            <i class="fa-solid fa-circle-check text-emerald-600 text-lg mr-2"></i> আপনার সিরিয়াল রিকুয়েস্ট সফলভাবে গৃহিত হয়েছে! আমাদের প্রতিনিধি শীঘ্রই আপনার সাথে যোগাযোগ করবেন।
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-12 bg-slate-100 border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-3xl p-6 sm:p-8 shadow-sm border border-slate-200">
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="w-10 h-10 rounded-xl bg-slate-900 text-white flex items-center justify-center text-lg">
+                        <i class="fa-brands fa-github"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-900">মোবাইল দিয়ে GitHub-এ ওয়েবসাইট সেটআপ গাইড (GitHub Pages)</h3>
+                        <p class="text-xs text-slate-500">খুব সহজেই মোবাইল ব্রাউজার ব্যবহার করে আপনার সাইটটি লাইভ করুন</p>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm text-slate-700">
+                    <div class="bg-slate-50 p-4 rounded-2xl border border-slate-100">
+                        <span class="w-7 h-7 bg-medical-600 text-white rounded-full inline-flex items-center justify-center font-bold text-xs mb-2">১</span>
+                        <h4 class="font-bold text-slate-900 mb-1">প্রিপারেশন</h4>
+                        <p class="text-xs text-slate-600">এই কোডটি কপি করে আপনার ফোনে <code class="bg-slate-200 px-1 py-0.5 rounded font-mono">index.html</code> নামে সেভ করুন।</p>
+                    </div>
+                    <div class="bg-slate-50 p-4 rounded-2xl border border-slate-100">
+                      <span class="w-7 h-7 bg-medical-600 text-white rounded-full inline-flex items-center justify-center font-bold text-xs mb-2">২</span>
+                        <h4 class="font-bold text-slate-900 mb-1">রিপোজিটরি তৈরি</h4>
+                        <p class="text-xs text-slate-600">github.com এ গিয়ে একটি নতুন Public Repository তৈরি করুন (যেমন: <code class="bg-slate-200 px-1.5 py-0.5 rounded font-mono">bieh-hospital</code>)।</p>
+                    </div>
+                    <div class="bg-slate-50 p-4 rounded-2xl border border-slate-100">
+                        <span class="w-7 h-7 bg-medical-600 text-white rounded-full inline-flex items-center justify-center font-bold text-xs mb-2">৩</span>
+                        <h4 class="font-bold text-slate-900 mb-1">ফাইল আপলোড ও লাইভ</h4>
+                        <p class="text-xs text-slate-600"><code class="bg-slate-200 px-1 py-0.5 rounded font-mono">index.html</code> ফাইলটি আপলোড করুন। এরপর Settings > Pages থেকে source এ <code class="bg-slate-200 px-1 py-0.5 rounded font-mono">main</code> branch সিলেক্ট করলেই ওয়েবসাইট লাইভ হয়ে যাবে!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 pb-8 border-b border-slate-800">
+                <div class="space-y-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-medical-600 flex items-center justify-center text-white font-bold">
+                            <i class="fa-solid fa-eye"></i>
+                        </div>
+                        <span class="text-white font-bold text-lg">ভেদরগঞ্জ ইসলামিয়া চক্ষু হাসপাতাল</span>
+                    </div>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        আপনার চোখের সুস্থতায় আমরা সর্বদা নিবেদিত। আধুনিক যন্ত্রপাতি ও অভিজ্ঞ বিশেষজ্ঞ ডাক্তার দ্বারা মানসম্মত সেবা প্রদানই আমাদের মূল লক্ষ্য।
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold text-sm mb-4 uppercase tracking-wider">দ্রুত লিংক</h4>
+                    <ul class="space-y-2 text-xs font-medium">
+                        <li><a href="#home" class="hover:text-white transition">হোম</a></li>
+                        <li><a href="#doctors" class="hover:text-white transition">ডাক্তারগণের সময়সূচী</a></li>
+                        <li><a href="#services" class="hover:text-white transition">আমাদের সেবাসমূহ</a></li>
+                        <li><a href="#contact" class="hover:text-white transition">যোগাযোগ ও সিরিয়াল</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold text-sm mb-4 uppercase tracking-wider">যোগাযোগের ঠিকানা</h4>
+                    <p class="text-xs text-slate-400 leading-relaxed space-y-2">
+                        <span class="block"><i class="fa-solid fa-location-dot text-medical-500 mr-2"></i> ভেদরগঞ্জ বাজার পূর্ব মাথা (পুরাতন বিদ্যুৎ অফিস ভবন), কলেজ রোড, ভেদরগঞ্জ, শরীয়তপুর।</span>
+                        <span class="block"><i class="fa-solid fa-phone text-medical-500 mr-2"></i> 01348-980793, 01789-363670</span>
+                    </p>
+                </div>
+            </div>
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+                <p>&copy; 2026 ভেদরগঞ্জ ইসলামিয়া চক্ষু হাসপাতাল. All Rights Reserved.</p>
+                <p>Designed for GitHub Pages & Mobile Management</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu on link click
+        document.querySelectorAll('#mobileMenu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Handle Appointment Booking Simulation
+        function handleBooking(event) {
+            event.preventDefault();
+            const name = document.getElementById('patientName').value;
+            const phone = document.getElementById('patientPhone').value;
+            const doctor = document.getElementById('doctorSelect').value;
+            
+            if(!name || !phone) {
+                alert('অনুগ্রহ করে নাম এবং মোবাইল নম্বর প্রদান করুন।');
+                return;
+            }
+
+            // Show Success Notification
+            const form = document.getElementById('appointmentForm');
+            const successMsg = document.getElementById('successMessage');
+            
+            form.reset();
+            successMsg.classList.remove('hidden');
+
+            setTimeout(() => {
+                successMsg.classList.add('hidden');
+            }, 6000);
+        }
+    </script>
+</body>
+</html>
